@@ -4,9 +4,13 @@
     <!-- Strings used for fragments for navigation -->
     <string name="main_fragment_label">Main Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
+
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="show">Show</string>
+
 
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="label_toast">Let\'s have a toast!</string>
+    <string name="text_alert_dialog">This is a simple alert dialog with Splitties library.</string>
 </resources>
