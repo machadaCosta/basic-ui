@@ -7,13 +7,24 @@
     tools:context=".MainFragment">
 
     <ImageView
+        android:id="@+id/mainToastBtn"
+        android:layout_width="@dimen/btn_size"
+        android:layout_height="@dimen/btn_size"
+        app:srcCompat="@drawable/ic_campaign"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mainInternetBtn"
+        app:layout_constraintEnd_toStartOf="@id/mainAlertBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
         android:id="@+id/mainAlertBtn"
         android:layout_width="@dimen/btn_size"
         android:layout_height="@dimen/btn_size"
         app:srcCompat="@drawable/ic_alert"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/mainInternetBtn"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mainToastBtn"
         app:layout_constraintEnd_toEndOf="parent"
         />
 

@@ -13,4 +13,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="label_toast">Let\'s have a toast!</string>
     <string name="text_alert_dialog">This is a simple alert dialog with Splitties library.</string>
+    <string name="title_send_email">Send email with:</string>
+    <string name="text_no_email_client">There is no email client installed.</string>
 </resources>

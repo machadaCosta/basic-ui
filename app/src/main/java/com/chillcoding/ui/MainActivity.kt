@@ -1,5 +1,8 @@
 package com.chillcoding.ui
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -15,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            toast(R.string.label_toast)
+            sendEmail("macha@chillcoding.com", "Hi", "Hello!")
         }
     }
 
@@ -32,6 +35,22 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun sendEmail(to: String, subject: String, msg: String) {
+        val emailIntent = Intent(Intent.ACTION_SEND)
+
+        emailIntent.data = Uri.parse("mailto:")
+        emailIntent.type = "text/plain"
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(to))
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
+        emailIntent.putExtra(Intent.EXTRA_TEXT, msg)
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.title_send_email)))
+        } catch (ex: ActivityNotFoundException) {
+            toast(R.string.text_no_email_client)
         }
     }
 }

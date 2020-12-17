@@ -11,6 +11,8 @@ import androidx.navigation.fragment.findNavController
 import com.chillcoding.ui.databinding.FragmentMainBinding
 import splitties.alertdialog.appcompat.*
 import splitties.alertdialog.material.materialAlertDialog
+import splitties.toast.toast
+
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -31,6 +33,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.mainToastBtn.setOnClickListener { toast(R.string.label_toast) }
         binding.mainAlertBtn.setOnClickListener { showAlertDialog() }
         binding.mainInternetBtn.setOnClickListener { browse("www.chillcoding.com") }
         binding.mainBtn.setOnClickListener {
@@ -39,7 +42,7 @@ class MainFragment : Fragment() {
     }
 
     private fun browse(url: String) {
-        var browser = Intent(Intent.ACTION_VIEW, Uri.parse("https://"+url))
+        var browser = Intent(Intent.ACTION_VIEW, Uri.parse("https://" + url))
         startActivity(browser)
     }
 
