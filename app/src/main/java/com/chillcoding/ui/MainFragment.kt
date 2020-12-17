@@ -1,5 +1,7 @@
 package com.chillcoding.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,9 +32,15 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.mainAlertBtn.setOnClickListener { showAlertDialog() }
+        binding.mainInternetBtn.setOnClickListener { browse("www.chillcoding.com") }
         binding.mainBtn.setOnClickListener {
             findNavController().navigate(R.id.action_MainFragment_to_SecondFragment)
         }
+    }
+
+    private fun browse(url: String) {
+        var browser = Intent(Intent.ACTION_VIEW, Uri.parse("https://"+url))
+        startActivity(browser)
     }
 
     private fun showAlertDialog() {
