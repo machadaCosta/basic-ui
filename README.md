@@ -87,4 +87,5 @@ Distributed under the GNU General Public License v3.0. See [LICENSE](https://git
 
 Macha DA COSTA, on [ChillCoding](https://www.chillcoding.com/?#about).
 
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/MachaDaCosta/
