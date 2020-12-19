@@ -36,7 +36,6 @@ It was created from `Basic Activity` template from _Android Studio_.
     <li><a href="#license">License</a></li>
     <li><a href="#related-blog-posts-in-fr">Related blog posts in FR</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ul>
 </details>
 
