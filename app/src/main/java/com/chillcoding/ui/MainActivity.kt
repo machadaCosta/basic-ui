@@ -7,7 +7,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.chillcoding.ui.ui.login.LoginActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import splitties.activities.start
+import splitties.activities.startActivity
 import splitties.toast.toast
 
 class MainActivity : AppCompatActivity() {

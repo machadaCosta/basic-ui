@@ -30,5 +30,9 @@ class SecondFragment : Fragment() {
         binding.buttonSecond.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_MainFragment)
         }
+
+        binding.buttonThird.setOnClickListener {
+            requireContext().start<LoginActivity>()
+        }
     }
 }
