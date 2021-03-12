@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.chillcoding.ui.databinding.ActivityMainBinding
 import com.chillcoding.ui.ui.login.LoginActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import splitties.activities.start
@@ -15,12 +16,15 @@ import splitties.toast.toast
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
+        binding.fab.setOnClickListener { view ->
             sendEmail("macha@chillcoding.com", "Hi", "Hello!")
         }
     }
